@@ -47,6 +47,11 @@
 .cta:hover {
   opacity: 0.85;
 }
+.text {
+  flex: 0 1 26rem;
+  max-width: 26rem;
+  min-width: 0;
+}
 
 @media (max-width: 640px) {
   .hero {
