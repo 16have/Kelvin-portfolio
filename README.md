@@ -1,16 +1,53 @@
-# React + Vite
+# Kelvin Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal developer portfolio built with React, showcasing full-stack and
+data/ML projects — from multi-tenant business tools to e-commerce sites.
 
-Currently, two official plugins are available:
+**Live site:** [your deployed Vercel URL here]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- **React** (Vite) — no CSS framework, plain CSS Modules
+- **React Router** — client-side routing across 5 pages
+- **Fraunces**, **IBM Plex Sans**, **IBM Plex Mono** — self-hosted via `@fontsource`
+- Deployed on **Vercel**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Pages
 
-## Expanding the ESLint configuration
+- `/` — Home, with an animated hero (dot-constellation background, cycling
+  screenshot tiles of featured projects)
+- `/projects` — Full project list with screenshots and detail
+- `/blog` — Notes/write-ups on specific technical problems from each project
+- `/resume` — Skills summary + downloadable PDF
+- `/contact` — Direct contact links
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Design
+
+- Dark slate palette (`#1B2430`) with a single cyan accent (`#4FD1C5`)
+- A canvas-based starfield runs behind every page — dim and static at rest,
+  brightening into connected "constellations" near the cursor
+- Respects `prefers-reduced-motion` throughout
+
+## Getting started
+
+```bash
+npm install
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+## Project structure
+src/
+├── components/ # Layout, Hero, HeroTiles, ProjectEntry, Starfield
+├── pages/ # Home, Projects, Blog, BlogPost, Resume, Contact
+├── data/ # projects.js, posts.js — edit these to update content
+├── styles/ # tokens.css (design variables), global.css (resets)
+└── assets/ # screenshots, images
+
+To update the featured projects, edit `src/data/projects.js` — everything
+else (hero tiles, the projects page, thumbnails) pulls from that one file.
