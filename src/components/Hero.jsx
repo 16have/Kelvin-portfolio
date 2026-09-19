@@ -1,5 +1,6 @@
 import HeroTiles from "./HeroTiles";
 import styles from "./Hero.module.css";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -14,9 +15,9 @@ export default function Hero() {
         <p className={styles.lede}>
           Full-stack developer working across web platforms and applied ML.
         </p>
-        <a href="/projects" className={styles.cta}>
+        <Link to="/projects" className={styles.cta}>
           View work
-        </a>
+        </Link>
       </div>
 
       <HeroTiles />
