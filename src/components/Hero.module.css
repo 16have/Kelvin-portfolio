@@ -9,8 +9,8 @@
 }
 
 .text {
-  flex: 1 1 32rem;
-  max-width: 32rem;
+  flex: 0 1 26rem;
+  max-width: 26rem;
   min-width: 0;
 }
 
@@ -47,17 +47,30 @@
 .cta:hover {
   opacity: 0.85;
 }
-.text {
-  flex: 0 1 26rem;
-  max-width: 26rem;
-  min-width: 0;
-}
 
 @media (max-width: 640px) {
   .hero {
-    padding: 2.5rem 1.25rem 3rem;
+    padding: 2.25rem 1.25rem 2.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+  .text {
+    max-width: 100%;
+    flex: none;
   }
   .title {
-    font-size: var(--step-4);
+    font-size: 2.1rem;
+  }
+  .eyebrow {
+    font-size: 0.75rem;
+  }
+  .lede {
+    font-size: 0.9rem;
+  }
+  .cta {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1.3rem;
   }
 }
