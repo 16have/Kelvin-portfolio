@@ -1,0 +1,105 @@
+.shell {
+  position: relative;
+  min-height: 100vh;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 2rem;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+
+.scrolled {
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.mark {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cyan);
+  display: inline-block;
+  animation: pulse 2.4s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.navList {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.navLink {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-soft);
+  font-size: 0.85rem;
+  padding-bottom: 4px;
+  transition: color 0.15s var(--ease);
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--cyan);
+  transition: width 0.2s var(--ease);
+}
+
+.navLink:hover {
+  color: var(--text);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.active {
+  color: var(--text);
+}
+
+.active::after {
+  width: 100%;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  .nav {
+    padding: 1rem 1.25rem;
+  }
+  .navList {
+    gap: 1.1rem;
+  }
+  .navLink {
+    font-size: 0.78rem;
+  }
+}

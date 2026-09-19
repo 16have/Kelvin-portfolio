@@ -1,0 +1,11 @@
+.thumb {
+  width: 100%;
+  max-width: 24rem;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  margin-bottom: 1rem;
+  display: block;
+  background: var(--surface);
+}

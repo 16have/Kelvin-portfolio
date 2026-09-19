@@ -1,0 +1,31 @@
+:root {
+  /* Color */
+  --bg: #1B2430;
+  --surface: #232E3D;
+  --surface-2: #161D27;
+  --line: #2E3A4A;
+  --text: #EDEFF2;
+  --text-soft: #8B93A0;
+  --cyan: #4FD1C5;
+  --cyan-dim: #123A38;
+
+  /* Type */
+  --font-display: "Fraunces", serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  /* Scale */
+  --step-0: 1rem;
+  --step-1: 1.2rem;
+  --step-2: 1.5rem;
+  --step-3: 2rem;
+  --step-4: 2.75rem;
+  --step-5: 3.5rem;
+
+  /* Layout */
+  --content-max: 42rem;
+  --dot-size: 16px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
